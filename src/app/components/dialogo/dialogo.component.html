@@ -1,0 +1,17 @@
+@if (resultado) {
+    <mat-dialog-content class="mat-typography">
+        <p>¡Mascota agregada con éxito!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="true">OK</button>
+    </mat-dialog-actions>
+} 
+@else {
+  <mat-dialog-content class="mat-typography">
+    <p>¿Esta seguro de agregar esta mascota?</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>CANCELAR</button>
+    <button mat-button (click)="resultado=true" cdkFocusInitial>SI</button>
+  </mat-dialog-actions>
+}
